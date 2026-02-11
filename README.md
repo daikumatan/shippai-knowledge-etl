@@ -47,14 +47,14 @@ venv/bin/python src/run.py URL1 URL2 URL3
 - `{事例ID}_{事例名称}.json` - 構造化されたJSONデータ
 - `results_NNN.json` - 全事例の処理結果（成功・除外・エラー）。実行ごとに連番で自動生成
 
-必須フィールド（概要・経過・原因・対処・対策・知識化・シナリオ）が欠損している事例は処理をスキップし、results.jsonに除外理由が記録される。
+必須フィールド（概要・経過・原因・対策・シナリオ）が欠損している事例は処理をスキップし、results ファイルに除外理由が記録される。
 
 ## ディレクトリ構成
 
 ```
 .
 ├── README.md           # このファイル
-├── etl_spec.md       # ETL仕様書
+├── requirements.md   # ETL仕様書
 ├── src/
 │   ├── extract.py      # URL → JSON抽出（HTMLパース、シナリオページ解析）
 │   ├── render_pdf.py   # JSON → PDF描画（対角線図、画像埋め込み）
@@ -65,4 +65,4 @@ venv/bin/python src/run.py URL1 URL2 URL3
 
 ## 仕様
 
-詳細な仕様は [etl_spec.md](etl_spec.md) を参照。
+詳細な仕様は [requirements.md](requirements.md) を参照。
